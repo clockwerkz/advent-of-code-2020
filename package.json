@@ -4,7 +4,7 @@
   "description": "Code Repository for AoC2020 challenge",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha day_**/test.js"
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
     "url": "https://github.com/clockwerkz/advent-of-code-2020/issues"
   },
   "homepage": "https://github.com/clockwerkz/advent-of-code-2020#readme",
-  "dependencies": {
+  "devDependencies": {
     "mocha": "^8.2.1"
   }
 }
