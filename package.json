@@ -4,7 +4,8 @@
   "description": "Code Repository for AoC2020 challenge",
   "main": "index.js",
   "scripts": {
-    "test": "mocha day_**/test.js"
+    "test": "mocha day_**/test.js",
+    "test-watch": "mocha day_**/test.js --watch"
   },
   "repository": {
     "type": "git",
