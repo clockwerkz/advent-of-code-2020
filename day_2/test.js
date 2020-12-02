@@ -16,15 +16,15 @@ describe("Day 2 - Part 1", ()=>{
 
 describe("Day 2 - Part 2", ()=>{  
     let input1 = '1-3 a: abcde';
-    let input2 =  '1-3 b: cdefg';
-    let input3 = '2-9 c: ccccccccc';
+    let input2 =  '7-8 p pppppbvpc';
+    let input3 = '3-4 f rcbf';
     it("should return 1 for 1-3 a: abcde, provided letter is only at the first position", ()=>{
         assert.strictEqual(two(input1), 1);
     });
-    it("should return 0 for 1-3 b: cdefg, neither position contains the provided letter", ()=>{
-        assert.strictEqual(two(input2), 0);
+    it("should return 1 for 7-8 p pppppbvpc, p appears only in position 8", ()=>{
+        assert.strictEqual(two(input2), 1);
     });
-    it("should return 0 for 2-9 c: ccccccccc, both positions have the provided letter", ()=>{
-        assert.strictEqual(two(input3), 0);
+    it("should return 1 for 3-4 f rcbf, f appears only in position 4", ()=>{
+        assert.strictEqual(two(input3), 1);
     });
 });
