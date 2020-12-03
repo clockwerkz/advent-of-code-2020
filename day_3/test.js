@@ -3,8 +3,18 @@ const one = require('./one');
 const two = require('./two');
 
 describe("Day 3 - Part 1", ()=>{  
-    const input = "";
-    it("should return return 0", ()=>{
-        assert.strictEqual(one(input), 0);
+    const input = `..##.......
+    #...#...#..
+    .#....#..#.
+    ..#.#...#.#
+    .#...##..#.
+    ..#.##.....
+    .#.#.#....#
+    .#........#
+    #.##...#...
+    #...##....#
+    .#..#...#.#`;
+    it("should return the number of #s on the path of slope right 3, down 1: 7", ()=>{
+        assert.strictEqual(one(input), 7);
     });
 });
