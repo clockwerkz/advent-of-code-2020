@@ -27,7 +27,7 @@ module.exports = function (field, input) {
         case "ecl":
             return validEyeColor.test(input);
         case "pid":
-            return validPID.test(input);
+            return (validPID.test(input) && input.length<10);
     }
     return false;
 }

@@ -27,8 +27,8 @@ module.exports = function(input) {
             if (!validateField(field, passport[field])) isValid = false;
         }
         if (isValid) {
-            console.log(passport);
             total++;
+            if (passport["pid"] == "6533951177") console.log(passport);
         }
     }
     return total;
