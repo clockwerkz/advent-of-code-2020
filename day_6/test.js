@@ -40,7 +40,7 @@ describe("Day 6 - Part 2",()=>{
         a
         
         b`;
-    const correctAnswer = 6;
+    const correctAnswer = 5;
     it(`should only add up the answers everyone has in common: ${correctAnswer}`,()=>{
         
         assert.strictEqual(two(input), correctAnswer);

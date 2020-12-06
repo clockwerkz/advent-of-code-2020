@@ -3,15 +3,19 @@ module.exports = function(input) {
     let total = 0;
     let oneAnswerGroups = 1;
     for (let answerGroup of passengerForms) {
-        const form = answerGroup.split(/\n/);
-        const answerKey = form[0].trim().split('').reduce((acc, el)=> ({ ...acc, [el]:1 }),{});
-        console.log(answerKey);
-        let uniqueAnswers = 0;
+        const form = answerGroup.split(/\n/).map(el => el.trim());
+        const answerKey = form[0].split('').reduce((acc, el)=> ({ ...acc, [el]:1 }),{});
+        let uniqueAnswers = true;
         for (let formAnswers of form.slice(1)) {
-            for (let answer of formAnswers.trim()) 
-              if (answerKey[answer]) uniqueAnswers+=1;
+            if (formAnswers.length === form[0].length) {
+                for (let answer of formAnswers) {
+                    if (!answerKey[answer]) uniqueAnswers = false;
+                }
+            } else {
+                uniqueAnswers = false;
+            }
         }
-        total += form.length=== 1 ? 1 : uniqueAnswers;
+        total += form.length=== 1 ? form[0].length : uniqueAnswers ? form[0].length : 0;
     }
     return total;
 }
