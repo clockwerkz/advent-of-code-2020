@@ -2,6 +2,16 @@ const assert = require('assert');
 
 const one = require("./one");
 const two = require("./two");
+const compareGroups = require("./compareGroups");
+
+describe("Testing compareGroups function",()=>{
+    input=`hvfxeqlwdkpozuabmijcygstnr
+    thfylcdbwnexovmzriqjasgkpu`;
+    const answer = 26;
+    it(`Should match all letters and return: ${answer}`,()=>{
+        assert.strictEqual(compareGroups(input), answer);
+    });
+});
 
 describe("Day 6 - Part 1",()=>{
     it("should correctly identify the collective answers of each group and total them up: 11",()=>{

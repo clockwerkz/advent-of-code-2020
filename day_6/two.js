@@ -15,6 +15,8 @@ module.exports = function(input) {
                 uniqueAnswers = false;
             }
         }
+        console.log(total);
+        if (uniqueAnswers) console.log(form[0], form[0].length);
         total += form.length=== 1 ? form[0].length : uniqueAnswers ? form[0].length : 0;
     }
     return total;
