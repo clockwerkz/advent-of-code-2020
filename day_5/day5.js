@@ -9,4 +9,5 @@ fs.readFile('input.txt', 'utf8', (err, data)=>{
         return;
     }
     console.log(one(data));
+    console.log(two(data));
 });
