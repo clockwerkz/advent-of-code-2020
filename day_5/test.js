@@ -21,7 +21,7 @@ describe("Day 5 - Part 1",()=>{
 });
 
 describe("Day 5 - Part 2",()=>{
-    it("should return 0",()=>{
-        assert.strictEqual(two(), 0);
-    });
+    // it("should return 0",()=>{
+    //     assert.strictEqual(two(), 0);
+    // });
 });
