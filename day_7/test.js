@@ -24,6 +24,6 @@ describe("Day 7 - Part 2",()=>{
     dark violet bags contain no other bags.`;
     const correctAnswer = 126;
     it(`should calculate the total bag space for shiny gold: ${correctAnswer}`,()=>{
-        assert.strictEqual(two(), correctAnswer);
+        assert.strictEqual(two(input), correctAnswer);
     });
 });
