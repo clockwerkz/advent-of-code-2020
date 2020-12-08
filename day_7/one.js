@@ -7,15 +7,16 @@ function findParentBags(bags, bagName) {
             parentBag.push(key);
         }
     }
+    console.log(parentBag);
     parentCount = parentBag.length;
+    console.log(parentCount);
     let currentBag = "";
     const bagsSearched = [];
     while (parentBag.length > 0) {
         currentBag = parentBag.shift();
         bagsSearched.push(currentBag);
         for (key of keys) {
-            if (bags[key].indexOf(currentBag) !== -1 && parentBag.indexOf(key)=== -1) {
-                console.log(currentBag);
+            if (bags[key].indexOf(currentBag) !== -1 && parentBag.indexOf(key)=== -1 && bagsSearched.indexOf(key) === -1) {
                 parentBag.push(key);
                 parentCount++;
             }
