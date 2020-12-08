@@ -7,9 +7,7 @@ function findParentBags(bags, bagName) {
             parentBag.push(key);
         }
     }
-    console.log(parentBag);
     parentCount = parentBag.length;
-    console.log(parentCount);
     let currentBag = "";
     const bagsSearched = [];
     while (parentBag.length > 0) {
