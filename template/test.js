@@ -4,13 +4,15 @@ const one = require("./one");
 const two = require("./two");
 
 describe("Day # - Part 1",()=>{
-    it("should return 0",()=>{
-        assert.strictEqual(one(), 0);
+    const answer = 0;
+    it(`should return ${answer}`,()=>{
+        assert.strictEqual(one(), answer);
     });
 });
 
 describe("Day # - Part 2",()=>{
-    it("should return 0",()=>{
-        assert.strictEqual(two(), 0);
+    const answer = 0;
+    it(`should return ${answer}`,()=>{
+        assert.strictEqual(two(), answer);
     });
 });

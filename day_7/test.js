@@ -15,7 +15,15 @@ describe("Day 7 - Part 1",()=>{
 });
 
 describe("Day 7 - Part 2",()=>{
-    it("should return 0",()=>{
-        assert.strictEqual(two(), 0);
+    const input = `shiny gold bags contain 2 dark red bags.
+    dark red bags contain 2 dark orange bags.
+    dark orange bags contain 2 dark yellow bags.
+    dark yellow bags contain 2 dark green bags.
+    dark green bags contain 2 dark blue bags.
+    dark blue bags contain 2 dark violet bags.
+    dark violet bags contain no other bags.`;
+    const correctAnswer = 126;
+    it(`should calculate the total bag space for shiny gold: ${correctAnswer}`,()=>{
+        assert.strictEqual(two(), correctAnswer);
     });
 });
