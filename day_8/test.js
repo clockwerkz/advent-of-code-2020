@@ -20,8 +20,17 @@ describe("Day 8 - Part 1",()=>{
 });
 
 describe("Day 8 - Part 2",()=>{
-    const answer = 0;
+    const input = `nop +0
+    acc +1
+    jmp +4
+    acc +3
+    jmp -3
+    acc -99
+    acc +1
+    jmp -4
+    acc +6`;
+    const answer = 8;
     it(`should return ${answer}`,()=>{
-        assert.strictEqual(two(), answer);
+        assert.strictEqual(two(input), answer);
     });
 });
