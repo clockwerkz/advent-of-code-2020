@@ -8,6 +8,6 @@ fs.readFile('input.txt', 'utf8', (err, data)=>{
         console.log(err);
         return;
     }
-    console.log(one(data));
-    console.log(two(data));
+    console.log(one(data, "shiny gold"));
+    //console.log(two(data));
 });
