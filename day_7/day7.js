@@ -9,5 +9,5 @@ fs.readFile('input.txt', 'utf8', (err, data)=>{
         return;
     }
     console.log(one(data, "shiny gold"));
-    //console.log(two(data));
+    console.log(two(data, "shiny gold"));
 });
