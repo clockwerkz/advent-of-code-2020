@@ -2,9 +2,9 @@ function countTotalBags(bags, bagName) {
 
     function countBags(bagName) {
         if (!Array.isArray(bags[bagName])) return 1;
-        const arr = bags[bagName];
+        const bagsInside = bags[bagName];
         let results = 1;
-        for (bag of arr) {
+        for (bag of bagsInside) {
             let regex = /[0-9]+\s/i;
             let bagCount = parseInt(bag.match(regex)[0]);
             bag = bag.replace(regex, '');
@@ -12,7 +12,7 @@ function countTotalBags(bags, bagName) {
         }
         return results;
     }
-    return countBags(bagName) - 1;
+    return countBags(bagName) - 1 //subtract 1 to account for the bag itself not being counted, only inside bags;
 }
 
 module.exports = function(input, bag) {
