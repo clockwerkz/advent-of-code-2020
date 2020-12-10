@@ -8,6 +8,7 @@ fs.readFile('input.txt', 'utf8', (err, data)=>{
         console.log(err);
         return;
     }
-    console.log(one(data, 25));
-    //console.log(two(data));
+    let oneVal = one(data, 25);
+    console.log(oneVal);
+    console.log(two(data, oneVal));
 });

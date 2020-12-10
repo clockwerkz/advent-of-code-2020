@@ -1,13 +1,14 @@
 module.exports = function(input, num) {
-    let [leftPtr, rightPtr, currentSum] = [0, 0, 0];
+    const arr = input.split('\n').map(el => parseInt(el));
+    let [leftPtr, rightPtr, currentSum] = [0,0, 0];
     while (leftPtr <= rightPtr && currentSum !== num) {
         if (currentSum < num) {
-            currentSum += input[rightPtr++];
-        } else if (currentSum > num){
-            currentSum -= input[leftPtr++];
-            console.log(leftPtr);
+            currentSum += arr[rightPtr++];
+        }
+        if (currentSum > num) {
+            currentSum -= arr[leftPtr++];
         }
     }
-    console.log(leftPtr, rightPtr);
-    return [leftPtr, rightPtr];
+    const subArr = arr.slice(leftPtr, rightPtr);
+    return Math.min(...subArr) + Math.max(...subArr);
 }
