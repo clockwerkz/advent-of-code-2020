@@ -31,8 +31,10 @@ describe("Day 9 - Part 1",()=>{
 });
 
 describe("Day 9 - Part 2",()=>{
-    const answer = 0;
+    const input = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+    const total = 18;
+    const answer = [3,5];
     it(`should return ${answer}`,()=>{
-        assert.strictEqual(two(), answer);
+        assert.deepStrictEqual(two(input, total), answer);
     });
 });
