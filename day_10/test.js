@@ -36,7 +36,7 @@ describe("Day 10 - Part 1",()=>{
     10
     3`;
     const answer = 22 * 10;
-    it(`should return ${answer}`,()=>{
+    it(`should the product of the total number of differences between 1 and 3 jolts: ${answer}`,()=>{
         assert.strictEqual(one(input), answer);
     });
 });
